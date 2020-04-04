@@ -1,4 +1,4 @@
-# vue-ts-skelton
+# ts-vue-guide
 
 ![setup.png](setup.png "setup")
 
