@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    {{ message }}
+    <span :title="message">
+      Hover your mouse over me for a few seconds to see my dynamically bound
+      title!
+    </span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default class App extends Vue {
-  private message = "Hello Vue!";
+  private message = "You loaded this page on " + new Date().toLocaleString();
 }
 </script>
 
