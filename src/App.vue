@@ -1,16 +1,13 @@
 <template>
   <div id="app">
-    <span :title="message">
-      Hover your mouse over me for a few seconds to see my dynamically bound
-      title!
-    </span>
+    <span v-if="seen">Now you see me</span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default class App extends Vue {
-  private message = "You loaded this page on " + new Date().toLocaleString();
+  private seen = true;
 }
 </script>
 
