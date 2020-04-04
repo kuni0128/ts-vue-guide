@@ -1,13 +1,21 @@
 <template>
   <div id="app">
-    <span v-if="seen">Now you see me</span>
+    <ol>
+      <li v-for="todo in todos" :key="todo.id">
+        {{ todo.text }}
+      </li>
+    </ol>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 export default class App extends Vue {
-  private seen = true;
+  private todos = [
+    { id: 1, text: "Learn JavaScript" },
+    { id: 2, text: "Learn Vue" },
+    { id: 3, text: "Build something awesome" }
+  ];
 }
 </script>
 
