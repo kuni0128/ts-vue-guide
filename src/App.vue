@@ -9,7 +9,9 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Component, Vue } from "vue-property-decorator";
+
+@Component
 export default class App extends Vue {
   private todos = [
     { id: 1, text: "Learn JavaScript" },
